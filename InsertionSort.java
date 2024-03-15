@@ -2,11 +2,18 @@ import java.util.Scanner;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        int aux, iterator;
-        int[] numbers = new int[5];
+        int aux, iterator, arraySize;
+        int[] numbers;
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Disordered values:");
+        System.out.println("Insert the Array size:");
+        arraySize = Integer.parseInt(
+            input.nextLine()
+        );
+
+        numbers = new int[arraySize];
+
+        System.out.println("Insert the disordered values:");
 
         for(int i = 0; i < numbers.length; i++) {
             numbers[i] = Integer.parseInt(
@@ -26,7 +33,7 @@ public class InsertionSort {
                 }
             }
         }
-        System.out.println("Ordered values:");
+        System.out.println("Ok, so the ordered (by Insertion Sort) values are:");
         for(int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i]);
         }
